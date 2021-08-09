@@ -1,10 +1,13 @@
-const SomeSingletonProvider = (() => {
+const SomeLazySingletonProvider = (() => {
 
     let singleton_instance;
 
     const create_instance = () => {
 
-        console.log('HI! Creating a new instance here');
+        console.log(
+            'HI! Creating a new lazy instance here as one does not already exist, ' +
+            'should only happen once',
+        );
 
         return {
             some_field: [ 1, 2, 3 ],
@@ -17,7 +20,6 @@ const SomeSingletonProvider = (() => {
         get_instance: () => {
 
             if (!singleton_instance) {
-
 
                 // NOTE: create an instance if one does not already exist
                 singleton_instance = create_instance();
@@ -32,4 +34,4 @@ const SomeSingletonProvider = (() => {
 })();
 
 
-module.exports = { SomeSingletonProvider };
+module.exports = { SomeLazySingletonProvider };
