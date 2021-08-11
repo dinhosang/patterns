@@ -1,4 +1,4 @@
-const { SomeLazySingletonProvider } = require('./lazy_singleton');
+const { SomeLazySingleton } = require('./lazy_singleton');
 
 
 describe('creational > singleton > lazy', () => {
@@ -15,13 +15,13 @@ describe('creational > singleton > lazy', () => {
 
     it('should log to console the first time it is retrieved.', () => {
 
-        all_retrieved_instances.push(SomeLazySingletonProvider.get_instance());
+        all_retrieved_instances.push(SomeLazySingleton.get_instance());
 
     });
 
     it('should NOT log to console the second time it is retrieved.', () => {
 
-        all_retrieved_instances.push(SomeLazySingletonProvider.get_instance());
+        all_retrieved_instances.push(SomeLazySingleton.get_instance());
 
     });
 
@@ -29,7 +29,7 @@ describe('creational > singleton > lazy', () => {
 
         // arrange
 
-        const current = SomeLazySingletonProvider.get_instance();
+        const current = SomeLazySingleton.get_instance();
 
         // act
 
@@ -49,7 +49,7 @@ describe('creational > singleton > lazy', () => {
 
         // arrange
 
-        const original = SomeLazySingletonProvider.get_instance();
+        const original = SomeLazySingleton.get_instance();
 
         // act
 

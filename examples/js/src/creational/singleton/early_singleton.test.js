@@ -1,4 +1,4 @@
-const { SomeEarlySingletonProvider } = require('./early_singleton');
+const { SomeEarlySingleton } = require('./early_singleton');
 
 
 describe('creational > singleton > early', () => {
@@ -24,7 +24,7 @@ describe('creational > singleton > early', () => {
 
     it('should NOT log a second time, even if retrieving instance for first time.', () => {
 
-        all_retrieved_instances.push(SomeEarlySingletonProvider.get_instance());
+        all_retrieved_instances.push(SomeEarlySingleton.get_instance());
 
     });
 
@@ -32,7 +32,7 @@ describe('creational > singleton > early', () => {
 
         // arrange
 
-        const current = SomeEarlySingletonProvider.get_instance();
+        const current = SomeEarlySingleton.get_instance();
 
         // act
 
@@ -52,7 +52,7 @@ describe('creational > singleton > early', () => {
 
         // arrange
 
-        const original = SomeEarlySingletonProvider.get_instance();
+        const original = SomeEarlySingleton.get_instance();
 
         // act
 

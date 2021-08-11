@@ -3,7 +3,7 @@
  *  -   still requires it to be importing into another file before it will take effect
  *      -   this is unlike static fields in Java, can import at the entry-point file of app though
  */
-const SomeEarlySingletonProvider = (() => {
+const SomeEarlySingleton = (() => {
 
     const singleton_instance = {
         some_field: [ 1, 2, 3 ],
@@ -26,4 +26,4 @@ const SomeEarlySingletonProvider = (() => {
 })();
 
 
-module.exports = { SomeEarlySingletonProvider };
+module.exports = { SomeEarlySingleton };

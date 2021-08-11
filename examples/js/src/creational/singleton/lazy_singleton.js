@@ -1,4 +1,4 @@
-const SomeLazySingletonProvider = (() => {
+const SomeLazySingleton = (() => {
 
     let singleton_instance;
 
@@ -34,4 +34,4 @@ const SomeLazySingletonProvider = (() => {
 })();
 
 
-module.exports = { SomeLazySingletonProvider };
+module.exports = { SomeLazySingleton };
